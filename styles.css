@@ -32,6 +32,7 @@ body{
     margin: 0 auto;
 }
 
+
 header{
     text-align: center;
     margin: 10rem 0 8rem;
@@ -88,7 +89,7 @@ main{
     bottom: 1rem;
     left: 2rem;
     color: var(--fc-fourth);
-    font-size: var(--fs-heading);
+    font-size: 4rem;
     font-weight: var(--fw-bold);
     display: flex;
     flex-direction: column;
@@ -139,4 +140,41 @@ img{
         transform: translateY(0);
     }
 
+}
+
+@media (min-width: 700px){
+    #page{
+        max-width: 117rem;
+        padding: 0 5rem;
+    }
+
+    :root{
+        --fs-heading: 5.6rem;
+    }
+
+    main{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 900px){
+    main{
+        grid-template-areas: "A B B" "C C D";
+    }
+
+    main div:nth-child(1){
+        grid-area: A;
+    }
+
+    main div:nth-child(2){
+        grid-area: B;
+    }
+
+    main div:nth-child(3){
+        grid-area: C;
+    }
+
+    main div:nth-child(4){
+        grid-area: D;
+    }
 }
